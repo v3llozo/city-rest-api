@@ -1,17 +1,6 @@
 import { Request, Response } from "express";
 import ClientData from "../data/client.data";
 import { Client } from "../models/client";
-let MOCKEmptyClient = {
-  id: 0,
-  name: "",
-  sex: "",
-  age: 0,
-  birthdate: new Date(),
-  city: {
-    name: "",
-    state: "",
-  },
-};
 
 const ClientController = {
   create(req: Request, res: Response): boolean {
