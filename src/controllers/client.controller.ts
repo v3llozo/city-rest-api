@@ -21,12 +21,13 @@ const ClientController = {
     return response;
   },
   getById(req: Request, res: Response): Client | undefined {
-    console.log("client.controller:getById");
+    console.log("client.controller:getById", req.params.id);
     let response = ClientData.getById(parseInt(req.params.id));
     res.send(response);
     return response;
   },
   update(req: Request, res: Response): Client | undefined {
+    console.log("client.controller:update", req.params.id);
     let client: Client = req.body;
     let response: Client | undefined;
     console.log("client.controller:update", client);
@@ -37,10 +38,15 @@ const ClientController = {
     return response;
   },
   delete(req: Request, res: Response): boolean {
-    console.log("client.controller:delete");
+    console.log("client.controller:delete", req.params.id);
     let response = ClientData.delete(parseInt(req.params.id));
-    res.send(response);
-    return true;
+    if (response) {
+      res.send();
+      return true;
+    } else {
+      res.status(400).send();
+      return false;
+    }
   },
 };
 export default ClientController;
