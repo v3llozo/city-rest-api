@@ -1,0 +1,75 @@
+GET / 
+host: localhost:3000
+
+### Create Client
+POST /client HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Content-Length: 163
+
+{
+    "name": "name1",
+    "sex": "sex1",
+    "age": 1,
+    "birthdate": "00000",
+    "city": {
+        "name": "city1",
+        "state": "state1"
+    }
+}
+
+### Client By Name
+GET /client/name/name1 HTTP/1.1
+Host: localhost:3000
+
+### Client By Id
+GET /client/id/1 HTTP/1.1
+Host: localhost:3000
+
+### Update Client
+PUT /client HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Content-Length: 39
+
+{
+    "id": 1,
+    "name": "name2"
+}
+
+### Delete Client
+DELETE /client/1 HTTP/1.1
+Host: localhost:3000
+
+---
+
+# City
+### Create City
+POST /city HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Content-Length: 49
+
+{
+    "name": "city1",
+    "state": "state1"
+}
+
+### City By Name
+GET /city/name/city1 HTTP/1.1
+Host: localhost:3000
+
+### City By State
+GET /city/state/state1 HTTP/1.1
+Host: localhost:3000
+
+### Update City
+PUT /city HTTP/1.1
+Host: localhost:3000
+Content-Type: application/json
+Content-Length: 39
+
+{
+    "id": 1,
+    "name": "city2"
+}
