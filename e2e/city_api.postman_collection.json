@@ -1,0 +1,892 @@
+{
+	"info": {
+		"_postman_id": "149ebf7c-40b1-4eb4-8e27-307e28d88e4a",
+		"name": "City Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"name1\",\r\n    \"sex\": \"sex1\",\r\n    \"age\": 1,\r\n    \"birthdate\": \"00000\",\r\n    \"city\": {\r\n        \"name\": \"city1\",\r\n        \"state\": \"state1\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/client",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create Client",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"name1\",\r\n    \"sex\": \"sex1\",\r\n    \"age\": 1,\r\n    \"birthdate\": \"00000\",\r\n    \"city\": {\r\n        \"name\": \"city1\",\r\n        \"state\": \"state1\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8-h5EdGu1QmHe4OkjsU292jNzSLfE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 18:25:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Client By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client/name/name1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						"name",
+						"name1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Client By Name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/client/name/name1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"name",
+								"name1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6b-71f3dC2RSaED0QaXZTw2YyESj6o\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 18:26:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"name1\",\n        \"sex\": \"sex1\",\n        \"age\": 1,\n        \"birthdate\": \"00000\",\n        \"city\": {\n            \"name\": \"city1\",\n            \"state\": \"state1\"\n        },\n        \"id\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Client By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client/id/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Client By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/client/id/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"id",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"69-x1ZOO0rK2Kngn5dOm7oL6PZJIYQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 18:26:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"name1\",\n    \"sex\": \"sex1\",\n    \"age\": 1,\n    \"birthdate\": \"00000\",\n    \"city\": {\n        \"name\": \"city1\",\n        \"state\": \"state1\"\n    },\n    \"id\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Client",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"name2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/client",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Client",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"name2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/client",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"69-Gt+KTekNDqhHapBlAAVdkPCHklQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 18:26:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"name2\",\n    \"sex\": \"sex1\",\n    \"age\": 1,\n    \"birthdate\": \"00000\",\n    \"city\": {\n        \"name\": \"city1\",\n        \"state\": \"state1\"\n    },\n    \"id\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Client",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/client/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"client",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Client",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/client/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"client",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 18:27:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Create City",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"city1\",\r\n    \"state\": \"state1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/city",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"city"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create City",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"city1\",\r\n    \"state\": \"state1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/city",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"city"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8-h5EdGu1QmHe4OkjsU292jNzSLfE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 18:28:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "City By Name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/city/name/city1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"city",
+						"name",
+						"city1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "City By Name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/city/name/city1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"city",
+								"name",
+								"city1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-awYIbB5KTVM3wr0sGDGQahLAG5s\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 18:28:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"city1\",\n        \"state\": \"state1\",\n        \"id\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "City By State",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/city/state/state1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"city",
+						"state",
+						"state1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "City By State",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/city/state/state1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"city",
+								"state",
+								"state1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-awYIbB5KTVM3wr0sGDGQahLAG5s\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 18:29:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"name\": \"city1\",\n        \"state\": \"state1\",\n        \"id\": 1\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "City By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/city/id/1",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"city",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "City By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/city/id/1",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"city",
+								"id",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-ciI79bEqFHGNnSDV8etvzO9RmB4\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 18:29:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"city1\",\n    \"state\": \"state1\",\n    \"id\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Update City",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"city2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/city",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"city"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update City",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"city2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/city",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"city"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-qLJV+CbSO/IGGfUZpEigHFil5CE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 28 Mar 2022 18:29:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"city2\",\n    \"state\": \"state1\",\n    \"id\": 1\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
