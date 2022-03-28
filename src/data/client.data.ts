@@ -13,23 +13,13 @@ const ClientData = {
   getByName(name: string): Client[] | undefined {
     console.log("client.data:getByName:", name);
     let result: Client[] = [];
-    clients.filter((c) => {
-      if (c.name === name) {
-        result.push(c);
-        return result;
-      }
-    });
+    result = clients.filter((c) => c.name === name);
     return result;
   },
   getById(id: number): Client | undefined {
     console.log("client.data:getById:", id);
     let result: Client | undefined;
-    clients.filter((c) => {
-      if (c.id === id) {
-        result = c;
-        return result;
-      }
-    });
+    result = clients.find((c) => c.id === id);
     return result;
   },
   update(client: Client): Client {

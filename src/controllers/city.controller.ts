@@ -27,9 +27,12 @@ const CityController = {
     res.send(response);
     return response;
   },
-  update(req: Request, res: Response) {
-    let response: City = req.body;
-    response = CityData.update(response);
+  update(req: Request, res: Response): City | undefined {
+    let city: City = req.body;
+    let response: City | undefined;
+    if (CityData.getById(city.id)) {
+      response = CityData.update(city);
+    }
     res.send(response);
     return response;
   },

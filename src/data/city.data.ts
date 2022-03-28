@@ -18,9 +18,9 @@ const CityData = {
     response = cities.filter((c) => c[key] == search);
     return response;
   },
-  getById(id: number): City[] | undefined {
-    let response: City[];
-    response = cities.filter((c) => c.id === id);
+  getById(id: number): City | undefined {
+    let response: City | undefined;
+    response = cities.find((c) => c.id === id);
     return response;
   },
   update(city: City) {
