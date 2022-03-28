@@ -38,7 +38,10 @@ const ClientData = {
     clients.forEach((c, i) => {
       if (c.id === client.id) {
         console.log({ ...client });
-        response = clients[i] = { ...client };
+        response = clients[i] = {
+          ...clients[i],
+          ...client,
+        };
       }
     });
     return response;

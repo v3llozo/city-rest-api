@@ -27,7 +27,7 @@ const CityData = {
     let response: City = city;
     cities.forEach((c, i) => {
       if (c.id === city.id) {
-        response = cities[i] = { ...city };
+        response = cities[i] = { ...cities[i], ...city };
       }
     });
     return response;
